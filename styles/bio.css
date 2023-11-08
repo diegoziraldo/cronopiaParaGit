@@ -1,0 +1,43 @@
+
+
+.photo{
+  width: 95%; /* Ancho del contenedor */
+  height: 600px; /* Alto del contenedor */
+  display: flex;
+  margin: 5% auto 0;
+  background-image: url('../img/Bio/2_BIO.jpg'); /* Ruta de la imagen */
+  background-size: 110%; /* Ajustar la imagen para cubrir todo el contenedor */
+  background-position: 30% center;
+  background-position: center 25%;
+}
+
+#parrafoBio {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  margin: 5% auto;
+  margin-bottom: 2rem;
+}
+
+#imgBio {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.bio-content {
+  flex: 1;
+}
+
+.bio-content h3, .bio-content h4, .bio-content p {
+  margin: 0;
+}
+
+
+
+

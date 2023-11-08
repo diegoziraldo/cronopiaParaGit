@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Dropdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <select id="idiomaSelect" style="width: 200px;">
+        <option value="es" data-image="./images/es/flag.png">Español</option>
+        <option value="en" data-image="./images/en/flag.png">English</option>
+        <!-- Agrega más opciones según sea necesario -->
+    </select>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#idiomaSelect').select2({
+                templateResult: formatOption,
+                templateSelection: formatOption
+            });
+
+            function formatOption(option) {
+                if (!option.id) return option.text;
+                const imgSrc = $(option.element).data('image');
+                return $('<span><img src="' + imgSrc + '" class="img-flag" /> ' + option.text + '</span>');
+            }
+        });
+    </script>
+</body>
+</html>

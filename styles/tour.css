@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+
+.photo{
+    width: 100%; /* Ancho del contenedor */
+    height: 600px; /* Alto del contenedor */
+    display: flex;
+    margin: 5% auto 0;
+    background-image: url('../img/Tour/5_Tour.jpg'); /* Ruta de la imagen */
+    background-size: 110%; /* Ajustar la imagen para cubrir todo el contenedor */
+    background-position: 30% center;
+    background-position: center 25%;
+  }

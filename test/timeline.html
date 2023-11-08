@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="timeline.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="timeline">
+        <div class="contenedor left-contenedor">
+
+            <h3 class="imgR"> 2023 <img src="<?php print dirname(dirname(__DIR__)) . '/img/Muresan.jpg'; ?>" alt=""></h3>
+            <img src="<?php print dirname(dirname(__DIR__)) . '/img/Muresan.jpg'; ?>" alt="">
+
+            <div class="text-box">
+                <h2>Tour</h2>
+                <small>2023</small>
+                <ul>
+                    <li>Circo Fest - Puerto Rico</li>
+                    <li>Festivalove - Italy</li>
+                    <li>Busker Chur - Switzerland</li>
+                    <li>Alchemika - Italy</li>
+                    <li>Street Theater Festival Brunico - Italy</li>
+                    <li>Les Nuits du Cirque - Belgium</li>
+                    <li>Girovagarte - Italy</li>
+                    <li>Street Performers Festival Villach - Austria</li>
+                    <li>Gauklerfestung - Germany</li>
+                    <li>Schloss spektakel - Germany</li>
+                    <li>Eis Zeitreise - Austria</li>
+                    <li>Variete et cetera - Germany</li>
+                    <li><?php print dirname(dirname(__DIR__)) . '/img/Muresan.jpg'; ?></li>
+                    <li><?php print dirname(dirname((__DIR__))) . '/img/Muresan.jpg'?></li>
+                </ul>
+                <span class="left-contenedor-arrow"></span>
+            </div>
+
+        </div>
+        <img src="img/Muresan.jpg" alt="">
+        <div class="contenedor right-contenedor">
+            <h3 class="imgL">2022 <img src="" alt="">  </h3></h3>
+            <div class="text-box">
+                <h2>Tour</h2>
+                <small>2022</small>
+                <ul>
+                    <li>Festival Art de Rue Sion - Switzteland</li>
+                    <li>Andersen Festival - Denmark</li>
+                    <li>Buskers Braunschweig - Germany</li>
+                    <li>Ana Desetnica - Slovenia</li>
+                    <li>Linz Theater Spektakel - Austria</li>
+                    <li>Scarti di strada - Italy</li>
+                    <li>Amalo street Festival - Italy</li>
+                    <li>Bolzano in bici - Italy </li>
+                    <li>Brick Lane Busker Festival - Italy</li>
+                    <li>Cafe Hanh - Germany</li>
+                </ul>
+                <span class="right-contenedor-arrow"></span>
+            </div>
+        </div>
+        <div class="contenedor left-contenedor">
+            <h3 class="imgR">2020 2021 <img src="" alt=""></h3>
+            <div class="text-box">
+                <h2>Tour</h2>
+                <small>2020-2021</small>
+                <ul>
+                    <li>Gallura Buskers Festival - Italy</li>
+                    <li>Pula Buskers - Italy</li>
+                    <li>Rubano Street Festival - Italy</li>
+                    <li>Abano Street Circus - Italy</li>
+                    <li>Festival internacional de clowns y payasos de Arrigorriaga - Euskadi</li>
+                    <li>Figuriamoci - Trento - Italy</li>
+                    <li>Mestre Carnival Street Show - Italy</li>
+                    <li>International FOF - Offida - Italy</li>
+                </ul>
+                <span class="left-contenedor-arrow"></span>
+            </div>
+        </div>
+        <div class="contenedor right-contenedor">
+            <h3 class="imgL">2019</h3>
+            <div class="text-box">
+                <h2>Tour</h2>
+                <small>2019</small>
+                <ul>
+                    <li>Asfaltart - Italy</li>
+                    <li>La Notte delle Streghe - Italy</li>
+                    <li>Sinjor Circo - Belgium</li>
+                    <li>Post circus - Luxembourg</li>
+                    <li>U23 Gavle - Sweden</li>
+                    <li>Linzer Pflasterspektakel - Austria</li>
+                    <li>Heisses Pflaster Vocklamarkt - Austria</li>
+                    <li>Villacher Straßenkunstfestival - Austria</li>
+                    <li>La strada Ausburg - Germany</li>
+                    <li>Komedianti v ulicích - Czech Republic</li>
+                    <li>Bondone in strada - Italy</li>
+                    <li>Malices et Merveilles - France</li>
+                    <li>Aout en Eclats - Belgium</li>
+                    <li>Ibla buskers festival - Italy</li>
+                </ul>
+                <span class="right-contenedor-arrow"></span>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let prevScrollpos = window.pageYOffset;
+            let navigateElement = document.getElementById("navigate");
+
+            // Agregar el evento "scroll" al objeto window
+            window.addEventListener("scroll", function() {
+                let currentScrollPos = window.pageYOffset + 10;
+
+                if (prevScrollpos > currentScrollPos) {
+                    // Si se está desplazando hacia arriba, cambiar la clase a "nav"
+                    navigateElement.setAttribute("id", "navigate");
+
+
+                } else {
+                    // Si se está desplazando hacia abajo, cambiar la clase a "navigate"
+                    navigateElement.setAttribute("id", "nav");
+
+                    // Agregar un setTimeout para revertir el cambio después de 3 segundos
+
+                }
+                prevScrollpos = currentScrollPos;
+                console.log(prevScrollpos);
+            });
+        });
+    </script>
+  </body>
+</html>

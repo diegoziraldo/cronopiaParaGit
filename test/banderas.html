@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Poner imágenes en drop-down (Select)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css" />
+    <style>
+        /* Estilo para quitar la etiqueta <b> y el borde del <option> */
+        .select2-selection--single {
+            border: none;
+        }
+        #id_option {
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <select id="id_select" style="width: 50px;" >
+        <option id="id_option" data-img_src="../img/italy.png"></option>
+        <option data-img_src="../img/spain.png"></option>
+        <option data-img_src="../img/unitedkingdom.png"></option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function custom_template(obj) {
+                var data = $(obj.element).data();
+                if (data && data.img_src) {
+                    var img_src = data.img_src;
+                    var template = $('<div><img src="' + img_src + '" style="width:100%;"/></div>');
+                    return template;
+                }
+            }
+
+            var options = {
+                templateSelection: custom_template,
+                templateResult: custom_template,
+            };
+
+            $('#id_select').select2(options);
+            $('.select2-container--default .select2-selection--single').css({ height: '20px', border:'none'});
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    display: flex;
+  }
+  
+  .videos {
+  
+    flex-direction: column;
+    width: 100vw;
+    height: 95vh;
+    margin: auto;
+    padding-bottom: 10rem;
+  }
+  
+  .videos-row {
+    display: flex;
+    justify-content: space-evenly; /* Espacio entre los videos */
+    gap: 20px;
+  }
+  
+  .videos-row iframe {
+    width: calc(33.33% - 10px); /* Tamaño de cada video en la segunda fila (33.33% del ancho - 10px de espacio entre ellos) */
+    height: 35vh;
+
+  }

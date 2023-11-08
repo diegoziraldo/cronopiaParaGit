@@ -1,0 +1,8 @@
+- Poner todas las imagenes a un porcentaje para poder hacerlas relativas y asi poder hacerlas responsivas
+    
+    img{
+        max-width:100%;
+        height:auto;
+    }
+
+- 

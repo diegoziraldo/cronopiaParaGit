@@ -1,0 +1,26 @@
+- UNA CAJA FLEXIBLE VA A TENER MEDIDAS RELATIVAS
+- SI PONGO UN WIDTH O UN HEIGHT CON 'px' eb una clase este va a ser lo primero que va a leer y los min-width o max- height no van a actuar.
+- USANDO "min-width" "max-width" "min-height" "max-height", TAMBIEN PODEMOS HACER FLEXIBLES NUESTROS CONTENDORES.
+- CON ESTA OPCION PODREMOS HACER QUE LAS IMAGENES NO PIERDAN SUS PROPORCIONES DE TAMAÑO 
+    
+    img{
+        max-width:100%;
+        height:auto;
+    }
+
+
+- CON LA PROPIEDAD 'sizes', VAMOS A PODER OBTENER DIFERENTES TAMAÑOS SEGUN EL TAMAÑO DEL DISPOSITIVO, ESTO PERMITIRA AL DISPOSITIVO DESCARGAR LA IMAGEN MAS OPTIMIZADA. 
+
+    sizes="(max-width:480px) 300px,(max-width:600px) 480px, (max-width:768px) 600px,(max-width:1024px) 900px,(max-width:1200px) 1200px "
+
+
+- CON LA ETIQUETA '<picture>' PODREMOS PONER DIFERENTES IMAGENES SEGUN EL TAMAÑO DEL VIEWPORT
+
+<picture>
+    <source srcset="img/kitten-large.png" media="(min-width:1024px)" >
+    <source srcset="img/kitten-medium.png" media="(min-width:600px)" >
+    <img src="img/kitten-small.png" alt="Kitten">
+</picture>
+
+
+- VER TEMA DE "position:relative" - PADRE -, CON "position:absolute" - HIJO -
